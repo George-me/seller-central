@@ -48,16 +48,16 @@ const Header = () => {
           <input
             type="text"
             placeholder="Search"
-            className="h-10 flex-grow bg-[#085762] text-white placeholder-white focus:outline-none px-2.5"
+            className="h-[38px] flex-grow bg-[#085762] text-white placeholder-white focus:outline-none px-2.5"
           />
 
           <button className="btn bg-[#027084] text-white px-0.5">
-            <MagnifyingGlassIcon className="h-10 p-2 stroke-2" />
+            <MagnifyingGlassIcon className="h-[38px] p-2 stroke-2" />
           </button>
         </div>
 
         {/* Right section */}
-        <div className="flex items-center text-white space-x-4 mx-6 whitespace-nowrap">
+        <div className="flex items-center text-white space-x-5 mr-6 whitespace-nowrap">
           <EnvelopeIcon className="h-5 stroke-2 cursor-pointer" />
           <Cog6ToothIcon className="h-5 stroke-2 cursor-pointer" />
 

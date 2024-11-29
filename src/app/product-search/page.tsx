@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import primeBoxes from "../../../public/assets/prime-boxes-3.1.png";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
 
 const infoCards = [
   {
@@ -66,11 +67,14 @@ const page = () => {
           </div>
 
           <div className="flex justify-between py-3 text-center font-semibold text-[#008296]">
-            <span className="px-3 w-1/2 border-x border-[#C0C3C4] cursor-pointer">
+            <Link
+              href="/product-search/add-product"
+              className="px-3 w-1/2 border-x border-[#C0C3C4] cursor-pointer"
+            >
               I'm adding a product not sold on Amazon
-            </span>
+            </Link>
             <span className="px-3 w-1/2 border-r  border-[#C0C3C4] cursor-pointer">
-              I'm adding a product not sold on Amazon
+              I'm uploading a file to add multiple products
             </span>
           </div>
         </div>
