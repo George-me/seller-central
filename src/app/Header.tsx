@@ -1,20 +1,24 @@
+"use client";
+import { useState } from "react";
 import Image from "next/image";
 import amazonLogo from "../../public/assets/seller-central_logo-white.svg";
 import {
   MagnifyingGlassIcon,
   EnvelopeIcon,
   Bars3Icon,
-  QuestionMarkCircleIcon,
 } from "@heroicons/react/24/outline";
 import { Cog6ToothIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
+import SideDrawer from "@/components/SideDrawer";
 
 const Header = () => {
+  const [open, setOpen] = useState(false);
+
   return (
     <header>
       {/* Top navigation container */}
       <div className="flex justify-between items-center text-white bg-[#00292D]">
-        <button className="btn text-white p-3">
+        <button className="btn text-white p-3" onClick={() => setOpen(!open)}>
           <Bars3Icon className="h-6 stroke-2" />
         </button>
 
@@ -54,17 +58,18 @@ const Header = () => {
 
         {/* Right section */}
         <div className="flex items-center text-white space-x-4 mx-6 whitespace-nowrap">
-          <EnvelopeIcon className="h-5 stroke-2" />
-          <Cog6ToothIcon className="h-5 stroke-2" />
+          <EnvelopeIcon className="h-5 stroke-2 cursor-pointer" />
+          <Cog6ToothIcon className="h-5 stroke-2 cursor-pointer" />
 
           <div className="flex items-center justify-center cursor-pointer select-none">
             <span className="text-base font-semibold px-1">EN</span>
             <span className="text-xl h-3.5">🢓</span>
           </div>
 
-          <span className="text-base font-semibold">Help</span>
+          <span className="text-base font-semibold cursor-pointer">Help</span>
         </div>
       </div>
+      <SideDrawer open={open} onClose={() => setOpen(false)} />
     </header>
   );
 };
