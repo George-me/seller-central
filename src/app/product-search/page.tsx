@@ -81,7 +81,7 @@ const page = () => {
       </div>
 
       {/* Bottom section */}
-      <div className="p-[18px]">
+      <div className="p-[18px] bg-white pb-10">
         <h2 className="text-[#214b53] text-lg font-semibold mb-3">
           Additional references
         </h2>

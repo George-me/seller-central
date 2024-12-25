@@ -72,7 +72,7 @@ const infoCards = [
 
 export default function Home() {
   return (
-    <div className="p-[18px]">
+    <div className="p-[18px] bg-white pb-10">
       {/* Top info cards */}
       <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-4">
         {infoCards.map(({ cardTitle, value, leftIcon, rightIcon }, index) => (

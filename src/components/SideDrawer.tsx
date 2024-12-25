@@ -59,27 +59,8 @@ interface Props {
 }
 
 const SideDrawer = ({ open, onClose }: Props) => {
-  // const [backDrop, setBackDrop] = useState(false);
-
-  // Delays the closing of the backdrop
-  // const handleClick = () => {
-  //   setBackDrop(true);
-  //   onClose();
-  //   setTimeout(() => {
-  //     setBackDrop(false);
-  //   }, 200);
-  // };
-
   return (
-    <>
-      {/* Overlay */}
-      {/* {(backDrop || open) && (
-        <div
-          className="fixed inset-0 bg-black/60 z-40"
-          onClick={handleClick}
-        ></div>
-      )} */}
-
+    <div>
       {/* Overlay */}
       {open && (
         <div className="fixed inset-0 bg-black/60 z-40" onClick={onClose}></div>
@@ -122,7 +103,7 @@ const SideDrawer = ({ open, onClose }: Props) => {
           </Link>
         ))}
       </div>
-    </>
+    </div>
   );
 };
 

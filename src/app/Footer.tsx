@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div>
       {/* Horizontal Line */}
-      <div className="m-4 my-4 mt-6 border-b-[1px] border-[#BBBFBF] opacity-80" />
+      <div className="mx-4 mb-4 border-b-[1px] border-[#BBBFBF] opacity-80" />
       <div className="flex justify-between px-5 pt-2.5 pb-8 text-xs text-[#232f3e]">
         <div className="flex items-center space-x-4">
           <span className="cursor-pointer">Help</span>

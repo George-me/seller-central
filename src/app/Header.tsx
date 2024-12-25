@@ -14,11 +14,18 @@ import SideDrawer from "@/components/SideDrawer";
 const Header = () => {
   const [open, setOpen] = useState(false);
 
+  const toggleDrawer = (newOpen: boolean) => {
+    setOpen(newOpen);
+  };
+
   return (
     <header>
       {/* Top navigation container */}
       <div className="flex justify-between items-center text-white bg-[#00292D]">
-        <button className="btn text-white p-3" onClick={() => setOpen(!open)}>
+        <button
+          className="btn text-white p-3"
+          onClick={() => toggleDrawer(!open)}
+        >
           <Bars3Icon className="h-6 stroke-2" />
         </button>
 
@@ -28,13 +35,10 @@ const Header = () => {
               alt="amazon logo"
               src={amazonLogo}
               height={25}
-              className="cursor-pointer"
+              className="cursor-pointer select-none"
             />
           </Link>
         </div>
-
-        {/* Horizontal Line */}
-        {/* <div className="m-4 my-4 border-b-[1px] border-[#BBBFBF]" /> */}
 
         <div className="mx-3 border border-[#BBBFBF] opacity-45 h-[30px]" />
 
